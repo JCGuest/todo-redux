@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './Input.css';
+import useDispatch from 'react-redux';
 
 const Input = () => {
   const [input, setInput] = useState('');
+  const dispatch = useDispatch();
 
   const addTodo = () => {};
 
