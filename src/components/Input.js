@@ -3,16 +3,16 @@ import './Input.css';
 import { useDispatch } from 'react-redux';
 // import saveTodo from '../features/todoSlice';
 // import increment from '../features/todoSlice';
-import todoReducer from '../features/todoSlice';
+import todoReducer from '../features/todoReducer';
 
 const Input = () => {
   const [input, setInput] = useState('');
-  const dispatcher = useDispatch();
+  const dispatch = useDispatch();
 
   const addTodo = () => {
     console.log(`Adding ${input}`);
 
-    dispatcher({ type: 'increment' });
+    dispatch({ type: 'ADD_TODO', todo: input });
 
     // dispatch(
     //   saveTodo({
