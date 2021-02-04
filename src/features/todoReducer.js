@@ -1,14 +1,13 @@
 // import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  todoList: [],
-  counter: 0
+  todoList: []
 };
 
 function todoReducer(state = initialState, action) {
   switch (action.type) {
-    case 'increment':
-      return { ...state, counter: state.counter + 1 };
+    case 'ADD_TODO':
+      return { ...state, todoList: state.todoList.concat(action.todo) };
     default:
       return state;
   }
