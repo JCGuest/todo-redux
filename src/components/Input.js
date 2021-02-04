@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 import './Input.css';
-import useDispatch from 'react-redux';
-import saveTodo from '../features/todoSlice';
+import { useDispatch } from 'react-redux';
+// import saveTodo from '../features/todoSlice';
+// import increment from '../features/todoSlice';
+import todoReducer from '../features/todoSlice';
 
 const Input = () => {
   const [input, setInput] = useState('');
-  const dispatch = useDispatch();
+  const dispatcher = useDispatch();
 
   const addTodo = () => {
     console.log(`Adding ${input}`);
 
-    dispatch(
-      saveTodo({
-        item: input,
-        done: false,
-        id: Date.now()
-      })
-    );
+    dispatcher({ type: 'increment' });
+
+    // dispatch(
+    //   saveTodo({
+    //     item: input,
+    //     done: false,
+    //     id: Date.now()
+    //   })
+    // );
   };
 
   return (
