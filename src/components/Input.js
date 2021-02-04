@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Input.css';
 import { useDispatch } from 'react-redux';
 // import saveTodo from '../features/todoSlice';
-// import increment from '../features/todoSlice';
 import todoReducer from '../features/todoReducer';
 
 const Input = () => {
