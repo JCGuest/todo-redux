@@ -7,7 +7,7 @@ const initialState = {
 function todoReducer(state = initialState, action) {
   switch (action.type) {
     case 'ADD_TODO':
-      return { ...state, todoList: state.todoList.concat(action.todo) };
+      return { ...state, todoList: state.todoList.concat(action.item) };
     default:
       return state;
   }

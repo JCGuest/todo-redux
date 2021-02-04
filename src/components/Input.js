@@ -12,7 +12,7 @@ const Input = () => {
   const addTodo = () => {
     console.log(`Adding ${input}`);
 
-    dispatch({ type: 'ADD_TODO', todo: input });
+    dispatch({ type: 'ADD_TODO', item: input, done: false, id: Date.now() });
 
     // dispatch(
     //   saveTodo({
