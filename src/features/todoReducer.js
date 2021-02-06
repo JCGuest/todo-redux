@@ -18,7 +18,7 @@ function todoReducer(state = initialState, action) {
     case 'CHECK':
       return {
         ...state,
-        todoLIst: state.todoList.map((item, i) =>
+        todoList: state.todoList.map((item) =>
           item.id === action.id ? { ...item, done: !item.done } : item
         )
       };
