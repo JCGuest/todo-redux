@@ -7,8 +7,6 @@ const Input = () => {
   const dispatch = useDispatch();
 
   const addTodo = () => {
-    // console.log(`Adding ${input}`);
-
     dispatch({ type: 'ADD_TODO', item: input, done: false, id: Date.now() });
 
     setInput('');

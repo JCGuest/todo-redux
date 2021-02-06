@@ -23,26 +23,13 @@ function todoReducer(state = initialState, action) {
         )
       };
 
-    // ...state,
-    //  contents: state.contents.map(
-    //      (content, i) => i === 1 ? {...content, text: action.payload}
-    //                              : content
-    //  )
-
-    // case 'UNCHECK':
-    //   const id = action.id;
-    //   return {
-    //     ...state,
-    //     todoList: state.todoList.map((item) => {
-    //       if (item.id === id) {
-    //         item.done = false;
-    //       }
-    //     })
-    //   };
     default:
       return state;
   }
 }
+
+// I tried to use createSlice as I believe that it is the more standard way of doing it but i did not like
+// the fact that it is not a tradition pure functional reducer. I will keep some of the code in here for refference
 
 // const todoSlice = createSlice({
 //   name: 'todos',
