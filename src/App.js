@@ -22,6 +22,7 @@ function App() {
   const todoList = useSelector(selectTodoList);
   return (
     <div className='app'>
+      <h1>TODO</h1>
       <div className='app__container'>
         <div className='app__todoContainer'>
           {todoList.map((item) => (
