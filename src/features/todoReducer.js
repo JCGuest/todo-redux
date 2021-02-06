@@ -15,6 +15,30 @@ function todoReducer(state = initialState, action) {
           id: action.id
         })
       };
+    case 'CHECK':
+      return {
+        ...state,
+        todoLIst: state.todoList.map((item, i) =>
+          item.id === action.id ? { ...item, done: !item.done } : item
+        )
+      };
+
+    // ...state,
+    //  contents: state.contents.map(
+    //      (content, i) => i === 1 ? {...content, text: action.payload}
+    //                              : content
+    //  )
+
+    // case 'UNCHECK':
+    //   const id = action.id;
+    //   return {
+    //     ...state,
+    //     todoList: state.todoList.map((item) => {
+    //       if (item.id === id) {
+    //         item.done = false;
+    //       }
+    //     })
+    //   };
     default:
       return state;
   }
