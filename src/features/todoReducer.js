@@ -35,4 +35,6 @@ function todoReducer(state = initialState, action) {
 
 // export const { saveTodo, increment } = todoSlice.actions;
 // export default todoSlice.reducer;
+export const selectTodoList = (state) => state.todos.todoList;
+
 export default todoReducer;
