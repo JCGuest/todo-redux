@@ -1,6 +1,6 @@
 Todo application using React/Redux. My motivation was to become more experienced with the more standard methods of implementing Redux such as using the template provided by reduxjs/toolkit.
 
-One small change I made to the reduxjs/toolkit: A reducer should always be a pure function. Using createSlice is not a pure funtion and I did not like debugging it so I wrote my own traditional, pure functional reducer.
+One small change I made to the reduxjs/toolkit: A reducer should always be a pure function. The toolkit seems to encourage the use of a method called 'createSlice' to create the reducers. I tried that first but createSlice is not a pure funtion and I did not like debugging it so I wrote my own traditional, pure functional reducer.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
